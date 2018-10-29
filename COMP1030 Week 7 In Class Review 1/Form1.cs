@@ -16,5 +16,32 @@ namespace COMP1030_Week_7_In_Class_Review_1
         {
             InitializeComponent();
         }
+
+        private void btnSubmit_Click(object sender, EventArgs e)
+        {
+            calculate();
+        }
+
+        private void calculate()
+        {
+            // declare variables
+            string name = txtName.Text;
+
+            // promt user to input name
+
+            // promt user to input birth year
+            Int32 yob = Convert.ToInt32(txtYear.Text);
+
+            // calculate
+            Int32 age = 2018 - yob;
+
+            // conversion 
+            string ageCalc = Convert.ToString(age);
+
+            // create the output
+            lblOutput.Text = "Hello " + name + ", you are " + ageCalc + " years old.";
+
+        }
     }
 }
+
